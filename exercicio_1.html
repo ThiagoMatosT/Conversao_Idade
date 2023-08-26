@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Idade</title>
+</head>
+<body>
+ <!--Escreva o corpo do html --> 
+</body>
+<script>
+   function converteIdade(dias_total) {
+    var year = Math.floor(dias_total / 365);
+    var resto = dias_total % 365;
+    var month = Math.floor(resto / 30);
+    var days = resto % 30;
+
+    return [year, month, days];
+}
+
+// Exemplo de uso:
+var dias_total = parseInt(prompt("Digite o número total de dias:"));
+var resultado = converteIdade(dias_total);
+
+var resultadoTexto = "Anos: " + resultado[0] + "\n" +
+                    "Meses: " + resultado[1] + "\n" +
+                    "Dias: " + resultado[2];
+
+alert(resultadoTexto);
+
+</script>
+</html>
